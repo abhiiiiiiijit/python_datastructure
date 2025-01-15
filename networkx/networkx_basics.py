@@ -9,8 +9,8 @@ graph_dict = {
     "D": [("E", 4)]
 }
 
-# Create a graph from the dictionary with distances
-G = nx.DiGraph()  # Directed graph
+# Create an undirected graph with distances
+G = nx.Graph()  # Undirected graph
 for node, edges in graph_dict.items():
     for neighbor, weight in edges:
         G.add_edge(node, neighbor, weight=weight)
